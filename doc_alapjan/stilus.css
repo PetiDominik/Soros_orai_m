@@ -14,9 +14,9 @@ main {
     width: 80%;
     max-width: 1000px;
     margin: 0 auto 0 auto;
-    background-color: #010101;
+    background-color: #333333;
     display: grid;
-    grid-template-columns: 2.5fr 1fr;
+    grid-template-columns: 4fr 1fr;
     grid-template-areas: "_h _h"
                          "_a _n"
                          "_f _f";
@@ -39,24 +39,19 @@ header {
 
 
 article {
-    width: 100%;
     grid-area: _a;
     text-align: justify;
     font-size: 10px;
     padding: 10px;
-    overflow: auto;
-}
-article #rendezes {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "_h1 _h1"
                          "_img _txt";
 }
-
 article h1 {
     grid-area: _h1;
     font-size: 20px;
-    padding: 0 0 10px 0
+    margin: 10px;
 }
 article img {
     grid-area: _img;
@@ -72,70 +67,25 @@ article ul li {
 /*-------------*/
 nav {
     grid-area: _n;
-    background-color: #333333;
-    width: 100%;
-}
-nav ul {
-    margin: 10px;
 }
 nav ul li {
     list-style-type: none;
-    width: 100%;
-    margin: 2px;
 }
 nav ul li a{
-    display: inline-block;
-    width: 100%;
-    border: 1px solid #999;
+    border: 1px solid white;
     border-radius: 5px;
     color: red;
-    padding: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    height: 100%;
 }
 nav ul li a:hover{
     background-color: rgb(145, 145, 145);
     color: white;
 }
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
 
 footer {
     grid-area: _f;
     text-align: center;
-    background-color: grey;
-    font-size: 18px;
-    line-height: 40px;
 }
-
-/*---------------------------------*/
-table {
-    width: 520px;
-    margin: 0 auto 0 auto;
-    color: white;
-    font-size: 20px;
-    border-collapse: collapse;
-}
-tr:nth-child(odd){
-    background-color: #666;
-}
-th {
-    background-color: black;
-}
-td, th{
-    text-align: center;
-    border: 1.5px solid grey;
-    padding: 2px;
-}
-
-@media screen and (max-width: 700px) {
-    main {
-        grid-template-columns: 1fr;
-        grid-template-areas: "_h"
-                             "_n"
-                             "_a"
-                             "_f";
-    }
-    table {
-        width: 400px;
-    }
-  }
