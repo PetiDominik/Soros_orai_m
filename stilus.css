@@ -29,7 +29,7 @@ header {
     background-image: url("imgs/beer-new_401732638.jpg");
     background-size: cover;
     font-weight: bold;
-    font: Garamond;
+    font-family: Garamond;
     font-size: 32px;
     text-align: left;
     letter-spacing: 4px;
